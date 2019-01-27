@@ -12,8 +12,10 @@ For this project, I trained an agent to navigate (and collect bananas!) in a lar
 
 A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
 
-NNet.py contains basic network from nnModule
-dqn_agent.py contains the agent include the double q network structure
+NNet.py contains basic network from nnModule.
+
+dqn_agent.py contains the agent include the double q network structure.
+
 Navigation_solution.ipynb contains the training and evaluation process code.
 
 ### Learning Algorithm
@@ -22,9 +24,9 @@ The we use double q network from Deep Q learning algrithm, which is described in
 
 Two deep q networks with the same structure are used:
 
-- **`1`** - Fully collected layer, input dim 37, output dim 128
-- **`2`** - Fully collected layer, input dim 128, output dim 64
-- **`3`** - Fully collected layer, input dim 64, output dim 4
+- **`1`** - Fully collected layer, input dim 37, output dim 128.
+- **`2`** - Fully collected layer, input dim 128, output dim 64.
+- **`3`** - Fully collected layer, input dim 64, output dim 4.
 
 The learning process lasts n_episodes. A memory is used to save all the steps in each episode. The local_network is updated every N steps and the target_network is soft-updated based on the local-network weight.
 
