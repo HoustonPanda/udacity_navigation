@@ -46,6 +46,7 @@ TAU = 1e-3               # soft_update parameter, the portion of new local_param
 
 
 ### Results
+![results](score.png)
 
 Follow the instructions in `Navigation_solution.ipynb` to train the agent! After 4000 episodes, the average score is about 13.2.
 In the evaluation run, 3 full episodes are tested and the average score is above 15. All these show that the agent has learned how to play the game very well.
