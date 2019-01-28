@@ -28,7 +28,9 @@ Two deep q networks with the same structure are used:
 - **`2`** - Fully collected layer, input dim 128, output dim 64. RELU activation.
 - **`3`** - Fully collected layer, input dim 64, output dim 4.
 
-The learning process lasts n_episodes. A memory is used to save all the steps in each episode. The local_network is updated every N steps and the target_network is soft-updated based on the local-network weight.
+The learning process lasts n_episodes. A memory is used to save all the steps in each episode. The memory class can add (state, action, reward, next_state, done) tuple and randomly sample a batch of tuples from the buffer. The local_network is updated every N steps and the target_network is soft-updated based on the local-network weight.
+
+During the training, in each step, an action is predicted based on current q local_network. A greedy search algorithm is used to determine whether the agent will follow the action based on q local_network or take random action. For every N steps, we randomly sample a batch of (state, action, reward, next_state, done) tuple and get the target q values from qtarget_network and reward. Then, we can get the predicted q values by q local_network. The loss is the mean square loss of (q target, q local). Using Adam optimizer we can optimize the loss. After the training, we update the target network parameters to be a linear combination of old target network and the local network.
 
 ### Hyper parameters
 
