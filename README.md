@@ -38,5 +38,5 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 The code is adapted from the udacity dqn exercise [click here](https://github.com/udacity/deep-reinforcement-learning/tree/master/dqn/exercise)
 
-Follow the instructions in `Navigation_train.ipynb` to get started with training the agent!
+Follow the instructions in `Navigation_solution.ipynb` to get started with training the agent!
 
