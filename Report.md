@@ -30,6 +30,21 @@ Two deep q networks with the same structure are used:
 
 The learning process lasts n_episodes. A memory is used to save all the steps in each episode. The local_network is updated every N steps and the target_network is soft-updated based on the local-network weight.
 
+### Hyper parameters
+
+LR = 1e-3   # this the the learning rate for the deep q network.
+
+BUFFER_SIZE = int(1e6)   # this is the size for the replay memory.
+
+UPDATE_CYCLE = 8         # the weight is trained every 8 steps.
+
+batch_size = 64          # the batch size for each training of the deep q network.
+
+GAMMA = 0.99             # reward decay factor.
+
+TAU = 1e-3               # soft_update parameter, the portion of new local_parameters are updated to target parameters.
+
+
 ### Results
 
 Follow the instructions in `Navigation_solution.ipynb` to train the agent! After 4000 episodes, the average score is about 13.2.
