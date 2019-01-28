@@ -20,12 +20,12 @@ Navigation_solution.ipynb contains the training and evaluation process code.
 
 ### Learning Algorithm
 
-The we use double q network from Deep Q learning algrithm, which is described in the paper [Deep Q learning](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf).
+In this project we use double q network from Deep Q learning algrithm, which is described in the paper [Deep Q learning](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf).
 
 Two deep q networks with the same structure are used:
 
-- **`1`** - Fully collected layer, input dim 37, output dim 128.
-- **`2`** - Fully collected layer, input dim 128, output dim 64.
+- **`1`** - Fully collected layer, input dim 37, output dim 128. RELU activation.
+- **`2`** - Fully collected layer, input dim 128, output dim 64. RELU activation.
 - **`3`** - Fully collected layer, input dim 64, output dim 4.
 
 The learning process lasts n_episodes. A memory is used to save all the steps in each episode. The local_network is updated every N steps and the target_network is soft-updated based on the local-network weight.
